@@ -23,10 +23,11 @@ object LocaleHelper {
     fun setLocale(context: Context, locale: Locale): Context {
         persist(context, locale)
 
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            updateResources(context, locale)
-        } else updateResourcesLegacy(context, locale)
+//        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+//            updateResources(context, locale)
+//        } else updateResourcesLegacy(context, locale)
 
+            return updateResourcesLegacy(context, locale)
     }
 
     fun isRTL(locale: Locale): Boolean {
